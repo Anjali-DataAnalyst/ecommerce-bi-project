@@ -1,0 +1,9 @@
+# Ignore datasets
+data/raw/
+data/cleaned/
+
+# Ignore notebook cache
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
