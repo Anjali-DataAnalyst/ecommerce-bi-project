@@ -31,3 +31,7 @@ This project uses the Olist Brazilian E-commerce dataset.
 Due to GitHub file size limits, raw and cleaned CSV files are not included.
 Data can be accessed from:
 https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+
+## 🗂 Database Schema (ER Diagram)
+
+![ER Diagram](insights/er_diagram.png)
