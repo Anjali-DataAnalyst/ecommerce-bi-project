@@ -1,49 +1,246 @@
-# E-commerce Sales Performance Dashboard
+# 🛒 E-Commerce Business Intelligence & Customer Analytics Platform
 
-## 🎯 Business Problem
+🚀 **End-to-End Data Analytics Project | SQL + Python + Power BI**
 
-An e-commerce company wants to understand sales trends, customer behavior, and revenue drivers to improve decision-making and optimize performance.
+---
 
-## Overview
-This project analyzes e-commerce sales data to uncover trends, revenue drivers, and customer behavior using SQL, Python, and Power BI.
+## 📌 Overview
 
-## Tools Used
-- Python (Pandas, Matplotlib)
-- MySQL
-- Power BI
+This project demonstrates a complete **Business Intelligence (BI) pipeline** built on a real-world e-commerce dataset.
 
-## Project Workflow
-1. Cleaned raw Olist e-commerce data using Python.
-2. Loaded cleaned data into MySQL with proper schema and relationships.
-3. Performed SQL queries for business metrics.
-4. Built an interactive Power BI dashboard.
+It transforms raw transactional data into **actionable insights** to analyze:
 
-## 📊 Key Metrics Defined
+* 📈 Sales performance
+* 👥 Customer behavior
+* 💰 Profitability
+* 🔁 Retention patterns
 
-- **Total Orders**: Count of unique order_id
-- **Total Revenue**: Sum of payment_value
-- **Average Order Value (AOV)**: Total Revenue / Total Orders
-- **Repeat Rate %**: (Repeat Customers / Total Customers) * 100
+---
 
-## Key Insights
-- Sales peak between May and August.
-- Revenue drops sharply in September.
-- Top 10 product categories contribute the majority of revenue.
-- Average Order Value remains stable across months.
-- Repeat customer rate is 2.91%, indicating most customers are one-time buyers.
+## 🎯 Project Objective
 
-## Dashboard Features
-- KPIs: Total Orders, Revenue, AOV
-- Monthly sales trends
-- Order status distribution
-- Top product categories by revenue
+Enable **data-driven decision-making** by converting raw data into meaningful business insights using modern analytics tools.
 
-## Dataset
-This project uses the Olist Brazilian E-commerce dataset.
-Due to GitHub file size limits, raw and cleaned CSV files are not included.
-Data can be accessed from:
-https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+---
 
-## 🗂 Database Schema (ER Diagram)
+## ❗ Problem Statement
+
+E-commerce businesses often struggle with:
+
+* Identifying **top revenue-driving products & categories**
+* Understanding **customer retention & repeat behavior**
+* Measuring **true profitability after logistics costs**
+* Analyzing **seasonal trends & growth patterns**
+
+---
+
+## 💡 Solution Approach
+
+Built a complete analytics solution:
+
+* 🧹 Cleaned & transformed raw data using **Python (Pandas)**
+* 🗄 Designed a **normalized MySQL database schema**
+* 📊 Created **analytical SQL views & KPI queries**
+* 📈 Developed an **interactive Power BI dashboard**
+
+---
+
+## 🛠 Tech Stack
+
+* **Python** → Pandas, NumPy
+* **SQL (MySQL)** → Joins, CTEs, Window Functions
+* **Power BI** → DAX, Data Modeling, Dashboarding
+* **Git & GitHub** → Version Control
+
+---
+
+## 🔄 Data Pipeline
+
+Raw CSV Data
+⬇
+Data Cleaning & Transformation (Python)
+⬇
+Relational Database (MySQL)
+⬇
+SQL Analytics & KPIs
+⬇
+Power BI Dashboard
+
+---
+
+## 📊 Dashboard Preview
+
+### 📌 Executive Overview
+
+![Executive](dashboards/images/executive.png)
+
+### 👥 Customer Retention
+
+![Retention](dashboards/images/retention.png)
+
+### 📦 Product Profitability
+
+![Profitability](dashboards/images/profitability.png)
+
+### 🚚 Delivery Performance
+
+![Delivery](dashboards/images/delivery.png)
+
+---
+
+## 🗄 Database Design
+
+Normalized schema with:
+
+* Customers
+* Orders
+* Order Items
+* Payments
+* Products
+
+### 🔧 Implemented Concepts:
+
+* Primary & Foreign Keys
+* Indexing
+* Analytical Views
+
+---
+
+## 📈 Key Metrics
+
+* Total Revenue
+* Total Orders
+* Average Order Value (AOV)
+* Profit & Margin
+* Repeat Purchase Rate
+* Customer Churn
+
+---
+
+## 🔍 Key Insights
+
+* 📈 Revenue shows steady growth with seasonal peaks
+* 🏆 Top categories contribute majority of revenue (**Pareto principle**)
+* ⚠ Customer retention is low (~3%) → improvement needed
+* 🚚 High logistics cost reduces profitability
+* 📉 Demand drops after peak seasons
+
+---
+
+## 🧠 Business Recommendations
+
+* 🎯 Improve retention through loyalty programs
+* 📦 Focus on high-performing categories
+* 🚚 Optimize logistics & delivery costs
+* 🎉 Run targeted seasonal campaigns
+
+---
+
+## 📊 Advanced Analysis
+
+* Cohort Analysis (Customer Retention)
+* RFM Analysis (Customer Segmentation)
+* Revenue Growth (Month-over-Month)
+* Profit vs Freight Analysis
+
+---
+
+## 💻 SQL Highlights
+
+* Window Functions (LAG, RANK)
+* Common Table Expressions (CTEs)
+* Aggregations & KPI calculations
+* Case-based segmentation
+
+---
+
+## 📊 DAX Measures
+
+```DAX
+Total Revenue = SUM(payments[payment_value])
+Total Orders = DISTINCTCOUNT(orders[order_id])
+AOV = DIVIDE([Total Revenue], [Total Orders])
+```
+
+---
+
+## 🧩 Data Model (ER Diagram)
 
 ![ER Diagram](insights/er_diagram.png)
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/your-username/ecommerce-bi-project.git
+cd ecommerce-bi-project
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3️⃣ Configure Environment
+
+Create `.env` file:
+
+```env
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASS=root
+DB_NAME=ecommerce_bi
+```
+
+### 4️⃣ Load Data
+
+```bash
+python load_data_to_mysql.py
+```
+
+### 5️⃣ Run SQL Scripts
+
+Execute:
+
+```
+sql/ecommerce_schema.sql
+```
+
+### 6️⃣ Open Dashboard
+
+Open `.pbix` file in Power BI
+
+---
+
+## 📂 Dataset
+
+Dataset: **Olist Brazilian E-Commerce Dataset**
+https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+
+---
+
+## 🎯 Key Outcome
+
+This project demonstrates the ability to:
+
+* Build an **end-to-end BI solution**
+* Perform **data cleaning, SQL analytics, and visualization**
+* Generate **real business insights**
+* Use **industry-standard tools** effectively
+
+---
+
+## ⭐ Support
+
+If you found this project helpful, consider giving it a ⭐ on GitHub!
+
+---
+
+## 🔗 Connect With Me
+
+Feel free to connect on LinkedIn for opportunities, feedback, or collaboration.
